@@ -8,15 +8,20 @@
 </head>
 <body>
     <header>
-        <h1>RepairLog - Assistência Técnica</h1>
-        <input type="search" name="reparo" id="reparo" placeholder="Pesquisar serviço...">
-        <p>Bem-vindo ao RepairLog!</p>
+        <div id="logo-container">
+            <img src="./img/Gemini_Generated_Image_166guy166guy166g-removebg-preview.png" id="logo" alt="RepairLog Logo">
+            <div>
+                <input type="search" name="situacaoServico" id="situacao" placeholder="Pesquise seu Serviço...">
+                <button type="button">Pesquisar</button>
+            </div>
+        </div>
+        <h1>Bem-vindo ao RepairLog!</h1>
         <p>Onde você pode registrar e acompanhar os serviços do seu aparelho.</p>
     </header>
     <main>
         <div id="servicos-registrados">
             <ul id="lista-servicos">
-                <li>Serviço 1: Nome do Cliente - Aparelho - Problema - situação</li>
+                <li>Serviço 1: <br> Nome do Cliente <br> Aparelho <br> Problema <br> situação</li>
             </ul>
         </div>
         <form action="" method="post">
@@ -36,7 +41,7 @@
             <label for="problema">Problema:</label>
             <textarea id="problema" name="problema" required></textarea><br><br>
 
-            <input type="submit" value="Registrar Serviço">
+            <button>Regirtar Serviço</button>
         </form>
     </main>
     <footer>
