@@ -1,14 +1,191 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard - RepairLog</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-    <header>
-        <h1>Dashboard - RepairLog</h1>
-    </header>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painel - RepairLog</title>
+    <link rel="stylesheet" href="css/dashboard.css"/>
+  </head>
+  <body class="dashboard-page">
+    <div class="dashboard-shell">
+      <aside class="dashboard-sidebar">
+        <a class="dashboard-brand" href="./dasboard.html">
+          <img
+            src="img/Gemini_Generated_Image_166guy166guy166g-removebg-preview.png"
+            alt="Logo do RepairLog"
+          />
+          <span>Repair<span>Log</span></span>
+        </a>
+        <nav class="dashboard-nav" aria-label="Navegação principal">
+          <p class="nav-label">Visão geral</p>
+          <a class="nav-item active" href="#dashboard">Painel</a>
+          <a class="nav-item" href="#end-of-day">Fechamento do dia</a>
+          <p class="nav-label">Operações</p>
+          <a class="nav-item" href="#new-sale">Nova venda</a>
+          <a class="nav-item" href="#new-order">Novo pedido</a>
+          <a class="nav-item" href="#new-repair">Novo reparo</a>
+          <a class="nav-item" href="#sales">Vendas</a>
+          <a class="nav-item" href="#orders">Pedidos</a>
+          <a class="nav-item" href="#repairs">Reparos</a>
+          <a class="nav-item" href="#services">Serviços</a>
+          <p class="nav-label">Estoque</p>
+          <a class="nav-item" href="#products">Produtos</a>
+          <a class="nav-item" href="#purchases">Compras</a>
+          <a class="nav-item" href="#parts">Peças</a>
+        </nav>
+        <div class="dashboard-account">
+          <div class="account-avatar">SP</div>
+          <div><strong>RepairLog</strong><small>Proprietário</small></div>
+          <a href="./index.html">Sair</a>
+        </div>
+      </aside>
+
+      <main class="dashboard-main" id="dashboard">
+        <header class="dashboard-header">
+          <div>
+            <h1>Painel</h1>
+            <p>Dinheiro, serviços, problemas e estoque em um só lugar.</p>
+          </div>
+          <div class="dashboard-actions">
+            <div class="range-tabs">
+              <button class="selected">Hoje</button
+              ><button>Últimos 7 dias</button><button>Últimos 30 dias</button>
+            </div>
+            <button class="refresh-button">Atualizar</button>
+          </div>
+        </header>
+
+        <section class="attention-panel" aria-labelledby="attention-title">
+          <div class="section-heading">
+            <div>
+              <h2 id="attention-title">Precisa de atenção</h2>
+              <p>
+                Veja filas urgentes, libere serviços parados e avance nos novos
+                trabalhos.
+              </p>
+            </div>
+            <span class="updated-label"
+              >Atualizado: 21 de maio de 2026, 07:17</span
+            >
+          </div>
+          <div class="metric-grid">
+            <div class="metric-card danger">
+              <span>!</span>
+              <div><small>Urgentes abertos</small><strong>3</strong></div>
+            </div>
+            <div class="metric-card warning">
+              <span>▣</span>
+              <div><small>Aguardando peças</small><strong>2</strong></div>
+            </div>
+            <div class="metric-card warning">
+              <span>△</span>
+              <div><small>Estoque baixo</small><strong>4</strong></div>
+            </div>
+            <div class="metric-card danger">
+              <span>⚑</span>
+              <div><small>Sem estoque</small><strong>0</strong></div>
+            </div>
+          </div>
+        </section>
+
+        <div class="dashboard-columns">
+          <div class="dashboard-stack">
+            <section class="dashboard-panel" aria-labelledby="queue-title">
+              <div class="section-heading">
+                <div>
+                  <h2 id="queue-title">Fila de reparos</h2>
+                  <p>Peças pendentes e reparos urgentes.</p>
+                </div>
+                <div class="panel-actions">
+                  <span>2 abertos</span><button>Abrir fila</button>
+                </div>
+              </div>
+              <div class="queue-filters">
+                <span>Aguardando peças: 2</span><span>Urgentes: 3</span>
+              </div>
+              <div class="queue-list">
+                <article>
+                  <i>!</i>
+                  <div>
+                    <strong>Google Pixel 7</strong
+                    ><small>Retorno urgente para o cliente</small>
+                    <p><b>Vence em 7h</b><b>Pronto</b></p>
+                  </div>
+                </article>
+                <article>
+                  <i>!</i>
+                  <div>
+                    <strong>Samsung Galaxy S22</strong
+                    ><small>Aguardando peças</small>
+                    <p><b>Vence em 14h</b><b>Aguardando peças</b></p>
+                  </div>
+                </article>
+              </div>
+            </section>
+            <section class="dashboard-panel" aria-labelledby="inventory-title">
+              <div class="section-heading">
+                <div>
+                  <h2 id="inventory-title">Alertas de estoque</h2>
+                  <p>Lista de itens com estoque baixo ou em risco.</p>
+                </div>
+                <div class="panel-actions">
+                  <span>2 abertos</span><button>Abrir fila</button>
+                </div>
+              </div>
+              <div class="queue-filters">
+                <span>Estoque baixo: 4</span><span>Sem estoque: 0</span>
+              </div>
+              <div class="queue-list inventory-list">
+                <article>
+                  <i>△</i>
+                  <div>
+                    <strong>Galaxy S24 Ultra 512GB Titanium Gray</strong
+                    ><small>Estoque baixo: 1 restante</small>
+                    <p><b>Hoje</b><b>Baixo</b></p>
+                  </div>
+                </article>
+                <article>
+                  <i>△</i>
+                  <div>
+                    <strong>iPhone 13 Pro OLED Screen Replacement</strong
+                    ><small>Estoque baixo: 1 restante</small>
+                    <p><b>Hoje</b><b>Baixo</b></p>
+                  </div>
+                </article>
+              </div>
+            </section>
+          </div>
+          <section
+            class="dashboard-panel revenue-panel"
+            aria-labelledby="revenue-title"
+          >
+            <div class="section-heading">
+              <div>
+                <h2 id="revenue-title">Receita</h2>
+                <p>
+                  Desempenho no período selecionado, dividido entre reparos e
+                  vendas.
+                </p>
+              </div>
+            </div>
+            <div class="revenue-grid">
+              <div>
+                <small>Total no período</small
+                ><strong class="money">R$ 181</strong><small>+100,0%</small>
+              </div>
+              <div>
+                <small>Reparos</small><strong>R$ 181 <em>(100,0%)</em></strong>
+              </div>
+              <div class="wide"><small>Vendas</small><strong>R$ 0</strong></div>
+              <div>
+                <small>Dinheiro</small><strong>R$ 181</strong
+                ><small>100,0%</small>
+              </div>
+              <div><small>Cartão</small><strong>R$ 0</strong></div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
 </html>
