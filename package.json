@@ -1,0 +1,22 @@
+{
+  "name": "repairlog",
+  "version": "1.0.0",
+  "description": "Interface web para registrar e acompanhar serviços de uma assistência técnica. O projeto reúne uma página inicial com cadastro, busca de serviços e cards de acompanhamento, além de uma dashboard operativa com visão geral de estoque, fila de reparos e receitas.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlderlanCorrea/RepairLog.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AlderlanCorrea/RepairLog/issues"
+  },
+  "homepage": "https://github.com/AlderlanCorrea/RepairLog#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
