@@ -1,16 +1,15 @@
 const express = require('express');
-const db = require('./data/db');
+const cors = require('cors');
+const clientesRoutes = require('./routes/clientes');
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 
+app.use('/usuarios', clientesRoutes);
+
 app.get('/', async (req, res) => {
-  try {
-    const [rows] = await db.query('SELECT * FROM usuarios');
-    res.json({ ok: true, dados: rows });
-  } catch (error) {
-    res.status(500).json({ ok: false, erro: error.message });
-  }
+  res.json({ ok: true, mensagem: 'API do RepairLog funcionando' });
 });
 
 app.listen(3000, () => {
