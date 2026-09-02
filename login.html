@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - RepairLog</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="login-body">
+    <div class="login-shell">
+        <div class="login-card">
+            <div class="login-brand">
+                <img src="./img/Gemini_Generated_Image_166guy166guy166g-removebg-preview.png" alt="Logo RepairLog">
+                <div>
+                    <span class="brand-kicker">RepairLog</span>
+                    <h1>Login administrativo</h1>
+                </div>
+            </div>
+
+            <p class="login-subtitle">Acesse o painel para gerenciar serviços, estoque e atendimento.</p>
+
+            <form class="login-form" action="./dasboard.html" method="get">
+                <div class="campo-formulario">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="admin@repairlog.com" autocomplete="email" required>
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" autocomplete="current-password" required>
+                </div>
+
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" name="lembrar">
+                        <span>Lembrar-me</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="botao-principal login-button">Entrar no painel</button>
+            </form>
+
+            <div class="login-footer">
+                <span>Voltar para o site</span>
+                <a href="./index.html">Home</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
